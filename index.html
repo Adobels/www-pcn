@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Association Polonia Caen Normandie</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --bg: #f3f4f6;
+      --text: #1f2937;
+      --accent: #b91c1c;
+      --muted: #4b5563;
+      font-family: "Inter", "Segoe UI", system-ui, sans-serif;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--text);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    header {
+      padding: 2.5rem 1.5rem 1.5rem;
+      text-align: center;
+    }
+
+    header img {
+      max-width: 220px;
+      width: 100%;
+      height: auto;
+    }
+
+    main {
+      flex: 1;
+      padding: 0 1.5rem 3rem;
+      display: grid;
+      gap: 2rem;
+    }
+
+    section {
+      background: #fff;
+      border-radius: 1.25rem;
+      padding: 2rem;
+      box-shadow: 0 15px 40px rgba(15, 23, 42, 0.12);
+    }
+
+    h1 {
+      margin: 1.5rem 0 0.5rem;
+      font-size: clamp(2rem, 4vw, 3rem);
+      line-height: 1.1;
+    }
+
+    h2 {
+      margin-top: 0;
+      font-size: 1.5rem;
+    }
+
+    p {
+      margin: 0 0 1rem;
+      line-height: 1.6;
+    }
+
+    ul {
+      padding-left: 1.25rem;
+      margin: 0 0 1.5rem;
+      line-height: 1.6;
+    }
+
+    .intro {
+      text-align: center;
+      background: linear-gradient(135deg, rgba(185, 28, 28, 0.9), rgba(220, 38, 38, 0.9)), url("images/pcn_team.jpg") center/cover;
+      color: #fff;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .intro::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.35);
+    }
+
+    .intro > * {
+      position: relative;
+      z-index: 1;
+    }
+
+    .grid {
+      display: grid;
+      gap: 1.5rem;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      align-items: start;
+    }
+
+    .card {
+      border: 1px solid rgba(15, 23, 42, 0.08);
+      border-radius: 1rem;
+      padding: 1.5rem;
+    }
+
+    footer {
+      text-align: center;
+      padding: 2rem 1rem;
+      color: var(--muted);
+    }
+
+    @media (min-width: 900px) {
+      main {
+        padding: 0 4rem 4rem;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      main section:first-child {
+        grid-column: 1 / -1;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <img src="images/pcn_logo_horizontal.png" alt="Association Polonia Caen Normandie" />
+    <h1>Association Polonia Caen Normandie</h1>
+    <p>W Caen, dla całego Calvados i Normandii.</p>
+  </header>
+
+  <main>
+    <section class="intro">
+      <h2>Witamy!</h2>
+      <p>
+        Witamy w stowarzyszeniu Polonia Caen Normandie – miejscu spotkań, wymiany i współpracy dla Polonii oraz
+        wszystkich przyjaciół Polski w Normandii.
+      </p>
+      <p>
+        Naszym celem jest budowanie relacji między ludźmi, promowanie kultury polskiej oraz wspieranie integracji poprzez
+        wydarzenia, warsztaty i inicjatywy społeczne.
+      </p>
+      <p>
+        Dołącz do nas i twórz z nami otwartą, aktywną i wspierającą się społeczność.
+      </p>
+    </section>
+
+    <section>
+      <h2>Qui sommes-nous ?</h2>
+      <p>
+        L’association Polonia Caen Normandie, fondée le 31 janvier 2026 à Caen, a pour mission de rassembler la
+        communauté polonaise et de promouvoir les échanges culturels entre la France et la Pologne.
+      </p>
+      <p>Nous organisons :</p>
+      <ul>
+        <li>des événements culturels et festifs</li>
+        <li>des rencontres et activités d’intégration</li>
+        <li>des ateliers éducatifs et linguistiques</li>
+        <li>des initiatives sociales et solidaires</li>
+      </ul>
+      <p>
+        Nos valeurs reposent sur le respect, la bienveillance, la coopération et l’ouverture à tous. L’association est
+        gérée par un bureau élu, engagé dans le développement de projets durables pour la communauté locale.
+      </p>
+    </section>
+
+    <section class="card">
+      <h2>Mission régionale</h2>
+      <p>
+        Implantés à Caen, działamy dla całego departamentu Calvados oraz szerzej dla Normandii, wspierając Polonię i
+        przyjaciół Polski w każdym powiecie regionu.
+      </p>
+    </section>
+
+    <section class="card">
+      <h2>Kontakt</h2>
+      <p>
+        Masz pomysł na wydarzenie? Chcesz dołączyć do naszej społeczności? Skontaktuj się z nami – wspólnie stworzymy
+        projekty, które wzmacniają więzi między Normandią a Polską.
+      </p>
+    </section>
+  </main>
+
+  <footer>
+    © <span id="year"></span> Association Polonia Caen Normandie · Caen · Calvados · Normandie
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>

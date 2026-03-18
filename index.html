@@ -127,6 +127,24 @@
       padding: 1.5rem;
     }
 
+    .team-pane {
+      display: grid;
+      gap: 1.5rem;
+      align-items: center;
+    }
+
+    .team-pane img {
+      width: 100%;
+      border-radius: 1rem;
+      box-shadow: 0 10px 30px rgba(15, 23, 42, 0.2);
+    }
+
+    @media (min-width: 720px) {
+      .team-pane {
+        grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.9fr);
+      }
+    }
+
     footer {
       text-align: center;
       padding: 2rem 1rem;
@@ -198,6 +216,22 @@
         Implantés à Caen, nous agissons pour l’ensemble du département du Calvados et plus largement pour toute la
         Normandie, en accompagnant la Polonia et les amis de la Pologne dans chaque territoire.
       </p>
+    </section>
+
+    <section class="team-pane">
+      <div>
+        <h2>Notre équipe</h2>
+        <p>
+          Le bureau de Polonia Caen Normandie réunit des bénévoles aux parcours complémentaires : entrepreneuriat,
+          culture, éducation, solidarité… Ensemble, nous imaginons et coordonnons les projets qui font vivre la
+          communauté.
+        </p>
+        <p>
+          Nous collaborons avec des partenaires locaux et des structures associatives pour amplifier l’impact de nos
+          actions et offrir un accompagnement bienveillant à chaque nouvelle idée.
+        </p>
+      </div>
+      <img src="images/pcn_team.jpg" alt="Équipe de l’association Polonia Caen Normandie" />
     </section>
 
     <section class="card">

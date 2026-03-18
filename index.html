@@ -39,6 +39,8 @@
       width: 100%;
       height: auto;
       border-radius: 1rem;
+      border: var(--box-border);
+      padding: 0.75rem;
     }
 
     main {
@@ -152,6 +154,29 @@
       color: var(--muted);
       font-style: italic;
     }
+    .contact-address {
+      text-align: center;
+      line-height: 1.5;
+    }
+    .social-links {
+      display: flex;
+      justify-content: center;
+      gap: 1.5rem;
+      align-items: center;
+      flex-wrap: wrap;
+      margin-top: 1rem;
+    }
+    .social-links a {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      color: var(--text);
+      text-decoration: none;
+      border: 1px solid var(--muted);
+      padding: 0.5rem 1rem;
+      border-radius: 999px;
+      font-weight: 600;
+    }
 
     footer {
       text-align: center;
@@ -165,14 +190,10 @@
         grid-template-columns: repeat(2, minmax(0, 1fr));
       }
 
-      main section:first-child {
-        grid-column: 1 / -1;
-      }
-
-      .team-pane {
-        grid-column: 1 / -1;
-      }
-
+      main section:first-child,
+      .about,
+      .mission,
+      .team-pane,
       .contact {
         grid-column: 1 / -1;
       }
@@ -207,7 +228,7 @@
       </p>
     </section>
 
-    <section>
+    <section class="about">
       <h2>Qui sommes-nous ?</h2>
       <p>
         L’association Polonia Caen Normandie, fondée le 31 janvier 2026 à Caen, a pour mission de rassembler la
@@ -226,7 +247,7 @@
       </p>
     </section>
 
-    <section class="card">
+    <section class="card mission">
       <h2>Mission régionale</h2>
       <p>
         Implantés à Caen, nous agissons pour l’ensemble du département du Calvados et plus largement pour toute la
@@ -263,6 +284,19 @@
         Une idée d’événement ? Envie de rejoindre notre réseau ? Contactez-nous pour bâtir ensemble des projets qui
         renforcent les liens entre la Normandie et la Pologne.
       </p>
+      <p class="contact-address">
+        <strong>Association Polonia Caen Normandie</strong><br />
+        8, rue Germaine Tillion<br />
+        14000 Caen, France
+      </p>
+      <div class="social-links">
+        <a href="https://www.instagram.com/polonia.caen.normandie" target="_blank" rel="noopener" class="ig-link">
+          <span aria-hidden="true">📸</span> Instagram
+        </a>
+        <a href="https://www.facebook.com/profile.php?id=61587930522360" target="_blank" rel="noopener" class="fb-link">
+          <span aria-hidden="true">📘</span> Facebook
+        </a>
+      </div>
     </section>
   </main>
 

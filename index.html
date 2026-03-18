@@ -210,110 +210,31 @@
   </header>
 
   <main>
-    <section class="intro">
-      <h2>Bienvenue !</h2>
-      <p>
-        Bienvenue à l’Association Polonia Caen Normandie – un lieu de rencontres, d’échanges et de coopération pour la
-        communauté polonaise et tous les amis de la Pologne en Normandie.
-      </p>
-      <p>
-        Notre objectif : créer du lien, mettre en valeur la culture polonaise et encourager l’intégration grâce à des
-        événements, des ateliers et des initiatives citoyennes.
-      </p>
-      <p>
-        Rejoignez-nous et contribuez à une communauté ouverte, active et solidaire.
-      </p>
-      <p>
-        <a class="cta" href="https://polonia-caen-normandie.s2.yapla.com/fr/membres" target="_blank" rel="noopener">
-          Devenir membre
-        </a>
-        <a
-          class="cta alt"
-          href="https://polonia-caen-normandie.s2.yapla.com/fr/membres/authentication/"
-          target="_blank"
-          rel="noopener"
-        >
-          Je suis déjà membre
-        </a>
-      </p>
-    </section>
+    <section class="intro" data-include="sections/intro.html"></section>
 
-    <section class="about">
-      <h2>Qui sommes-nous ?</h2>
-      <p>
-        L’association Polonia Caen Normandie, fondée le 31 janvier 2026 à Caen, a pour mission de rassembler la
-        communauté polonaise et de promouvoir les échanges culturels entre la France et la Pologne.
-      </p>
-      <p>Nous organisons :</p>
-      <ul>
-        <li>des événements culturels et festifs</li>
-        <li>des rencontres et activités d’intégration</li>
-        <li>des ateliers éducatifs et linguistiques</li>
-        <li>des initiatives sociales et solidaires</li>
-      </ul>
-      <p>
-        Nos valeurs reposent sur le respect, la bienveillance, la coopération et l’ouverture à tous. L’association est
-        gérée par un bureau élu, engagé dans le développement de projets durables pour la communauté locale.
-      </p>
-    </section>
+    <section class="about" data-include="sections/about.html"></section>
 
-    <section class="card mission">
-      <h2>Mission régionale</h2>
-      <p>
-        Implantés à Caen, nous agissons pour l’ensemble du département du Calvados et plus largement pour toute la
-        Normandie, en accompagnant la Polonia et les amis de la Pologne dans chaque territoire.
-      </p>
-    </section>
+    <section class="card mission" data-include="sections/mission.html"></section>
 
-    <section class="team-pane">
-      <div>
-        <h2>Notre équipe</h2>
-        <p>
-          Le bureau de Polonia Caen Normandie réunit des bénévoles aux parcours complémentaires : entrepreneuriat,
-          culture, éducation, solidarité… Ensemble, nous imaginons et coordonnons les projets qui font vivre la
-          communauté.
-        </p>
-        <p>
-          Nous collaborons avec des partenaires locaux et des structures associatives pour amplifier l’impact de nos
-          actions et offrir un accompagnement bienveillant à chaque nouvelle idée.
-        </p>
-      </div>
-      <div>
-        <img src="images/pcn_team.jpg" alt="Équipe de l’association Polonia Caen Normandie" />
-        <p class="team-caption">
-          Équipe fondatrice et invités (Rudy Niewiadomski, Élu Ville de Caen et Caen la mer · Sophie Simonnet, Adjointe
-          au Maire de Caen) lors de la première rencontre du 7 mars 2026, photographiée par Krzysztof Pazdalski : de
-          gauche, Dobrawa Cosson (Vice-présidente), Rudy Niewiadomski, Sophie Simonnet, Piotr Budny (membre de biuro),
-          Anne Rouvière (Présidente), Blazej Sleboda (Trésorier), Ewa Lebrethon (membre de biuro), Rafał Burkat
-          (Secrétaire).
-        </p>
-      </div>
-    </section>
+    <section class="team-pane" data-include="sections/team.html"></section>
 
-    <section class="card contact">
-      <h2>Contact</h2>
-      <p>
-        Une idée d’événement ? Envie de rejoindre notre réseau ? Contactez-nous pour bâtir ensemble des projets qui
-        renforcent les liens entre la Normandie et la Pologne.
-      </p>
-      <p class="contact-address">
-        <strong>Association Polonia Caen Normandie</strong><br />
-        8, rue Germaine Tillion<br />
-        14000 Caen, France
-      </p>
-      <div class="social-links">
-        <a href="https://www.instagram.com/polonia.caen.normandie" target="_blank" rel="noopener" class="ig-link">
-          <span aria-hidden="true">📸</span> Instagram
-        </a>
-        <a href="https://www.facebook.com/profile.php?id=61587930522360" target="_blank" rel="noopener" class="fb-link">
-          <span aria-hidden="true">📘</span> Facebook
-        </a>
-      </div>
-    </section>
+    <section class="card contact" data-include="sections/contact.html"></section>
   </main>
 
   <footer>
     © 2026 Association Polonia Caen Normandie · Polonia · Caen · Calvados · Normandie
   </footer>
+
+  <script>
+    document.querySelectorAll("[data-include]").forEach(async (section) => {
+      const url = section.getAttribute("data-include");
+      try {
+        const response = await fetch(url);
+        section.innerHTML = await response.text();
+      } catch (error) {
+        console.error("Erreur de chargement pour", url, error);
+      }
+    });
+  </script>
 </body>
 </html>

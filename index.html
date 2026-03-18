@@ -94,6 +94,25 @@
       z-index: 1;
     }
 
+    .cta {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0.85rem 1.75rem;
+      border-radius: 999px;
+      background: #fff;
+      color: var(--accent);
+      font-weight: 600;
+      text-decoration: none;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+    }
+
+    .cta:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 14px 35px rgba(0, 0, 0, 0.3);
+    }
+
     .grid {
       display: grid;
       gap: 1.5rem;
@@ -145,6 +164,11 @@
       </p>
       <p>
         Dołącz do nas i twórz z nami otwartą, aktywną i wspierającą się społeczność.
+      </p>
+      <p>
+        <a class="cta" href="https://polonia-caen-normandie.s2.yapla.com/fr/membres" target="_blank" rel="noopener">
+          Zostań członkiem
+        </a>
       </p>
     </section>
 

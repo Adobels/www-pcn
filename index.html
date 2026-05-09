@@ -182,6 +182,28 @@
       text-align: center;
       line-height: 1.5;
     }
+    .official-details {
+      margin: 1.5rem 0;
+    }
+    .official-details div {
+      margin-bottom: 0.85rem;
+    }
+    .official-details dt {
+      font-weight: 800;
+      display: inline;
+    }
+    .official-details dt::after {
+      content: " : ";
+    }
+    .official-details dd {
+      display: inline;
+      margin: 0;
+      line-height: 1.5;
+    }
+    .official-details div::after {
+      content: "";
+      display: block;
+    }
     .social-links {
       display: flex;
       justify-content: center;
@@ -229,18 +251,19 @@
     <img src="images/pcn_logo_horizontal.png" alt="Association Polonia Caen Normandie" />
     <h1>Association Polonia Caen Normandie</h1>
     <p>À Caen, au service du Calvados et de toute la Normandie.</p>
+    <p>Site officiel d'une association loi 1901 à but non lucratif.</p>
   </header>
 
   <main>
-    <section class="intro" data-include="sections/intro.html"></section>
+    <section id="accueil" class="intro" data-include="sections/intro.html"></section>
 
-    <section class="about" data-include="sections/about.html"></section>
+    <section id="about" class="about" data-include="sections/about.html"></section>
 
-    <section class="card mission" data-include="sections/mission.html"></section>
+    <section id="mission" class="card mission" data-include="sections/mission.html"></section>
 
-    <section class="team-pane" data-include="sections/team.html"></section>
+    <section id="team" class="team-pane" data-include="sections/team.html"></section>
 
-    <section class="card contact" data-include="sections/contact.html"></section>
+    <section id="contact" class="card contact" data-include="sections/contact.html"></section>
   </main>
 
   <footer>
@@ -261,7 +284,7 @@
   <script type="application/ld+json">
     {
       "@context": "https://schema.org",
-      "@type": "LocalBusiness",
+      "@type": "NGO",
       "name": "Association Polonia Caen Normandie",
       "alternateName": [
         "Polonia Caen",
@@ -273,6 +296,9 @@
         "Association Polonia Caen"
       ],
       "url": "https://polonia-caen-normandie.fr/",
+      "email": "poloniacaennormandie@gmail.com",
+      "identifier": "RNA W142018773",
+      "nonprofitStatus": "Association française loi 1901 à but non lucratif",
       "image": "https://polonia-caen-normandie.fr/images/pcn_team.jpg",
       "description": "Association Polonia Caen Normandie rassemble Polonia Caen, Polonia Calvados et Polonia Normandie pour soutenir Polacy w Caen.",
       "address": {
